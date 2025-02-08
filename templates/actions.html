@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions - SewerSense</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='actions.css') }}">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">SewerSense</div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li> <!-- Navigation back to home -->
+                    <li><a href="complaints.html">Complaints</a></li>
+                    <li><a href="#login-signup">Login/Sign Up</a></li>
+                    <li><a href="#profile" class="profile-link">
+                        <img src="profile.jpg" alt="Profile" class="profile-img">
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Actions Section -->
+    <section class="actions-section">
+        <h1 class="section-heading">Civic Authority Actions</h1>
+        <div class="action-buttons-container">
+            <button class="action-button">Send Sewage Cleaners</button>
+            <button class="action-button">Send Personnel to Inspect</button>
+            <button class="action-button">Clear Blockage from Sewers</button>
+            <button class="action-button">Repair Damaged Sewers</button>
+            <button class="action-button">Investigate Flooding Reports</button>
+            <button class="action-button">Schedule Maintenance</button>
+        </div>
+    </section>
+
+    <!-- Complaint Fetch Section -->
+    <section class="complaint-fetch-section">
+        <h2 class="section-heading">Fetch Complaints</h2>
+        <button id="fetch-complaints" class="fetch-button">Fetch Complaints</button>
+        <div id="complaint-data" class="complaint-data">
+            <!-- Fetched complaint data will appear here -->
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const fetchButton = document.getElementById('fetch-complaints');
+    const complaintDataDiv = document.getElementById('complaint-data');
+
+    // Dummy complaints data (you can replace this with actual fetch call later)
+    const complaints = [
+        {
+            id: 1,
+            description: "Sewage overflow near 5th Avenue, Manhattan.",
+            date: "2024-09-01",
+            status: "Pending"
+        },
+        {
+            id: 2,
+            description: "Blocked sewer in Brooklyn causing flooding in the area.",
+            date: "2024-09-02",
+            status: "Under Review"
+        },
+        {
+            id: 3,
+            description: "Sewage backup in the Bronx due to heavy rainfall.",
+            date: "2024-09-03",
+            status: "Resolved"
+        }
+    ];
+
+    // Function to display complaints
+    function displayComplaints(data) {
+        complaintDataDiv.innerHTML = '';
+        data.forEach(complaint => {
+            const complaintItem = document.createElement('div');
+            complaintItem.classList.add('complaint-item');
+            complaintItem.innerHTML = `
+                <p><strong>ID:</strong> ${complaint.id}</p>
+                <p><strong>Description:</strong> ${complaint.description}</p>
+                <p><strong>Date:</strong> ${complaint.date}</p>
+                <p><strong>Status:</strong> ${complaint.status}</p>
+                <hr>
+            `;
+            complaintDataDiv.appendChild(complaintItem);
+        });
+    }
+
+    // Fetch complaints (simulated with dummy data)
+    fetchButton.addEventListener('click', function () {
+        displayComplaints(complaints);
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>
+
