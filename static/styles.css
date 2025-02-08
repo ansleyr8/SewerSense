@@ -1,0 +1,433 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif; /* Default font for body text */
+}
+
+body {
+    background-color: #081F34; /* Dark background */
+    color: #CFFF81; /* Main text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #081F34; /* Dark header */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-family: 'Archivo Black', sans-serif; /* Use Archivo Black for logo */
+    font-size: 24px;
+    color: #CFFF81; /* Logo color */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+}
+
+.navbar-right ul li {
+    margin-left: 30px;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: #CFFF81; /* Link color */
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-right ul li a:hover {
+    color: #fff; /* Hover color */
+}
+
+/* Profile Image */
+.profile-link {
+    display: inline-block;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Circular image */
+    border: 2px solid #CFFF81; /* Border using second color */
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for modern look */
+}
+
+/* Intro Section */
+.intro-section {
+    padding: 100px 20px 60px;
+    text-align: center;
+}
+
+.main-heading {
+    font-family: 'Archivo Black', sans-serif; /* Main heading font */
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 18px;
+}
+
+/* Divider */
+.divider {
+    height: 4px; /* Divider height */
+    background-color: #CFFF81; /* Divider color */
+    margin: 20px 0; /* Space around the divider */
+}
+
+/* GIS Map Container */
+.map-section {
+    color: #000000;
+    background-color: #E1DFD9; /* Light background */
+    padding: 40px 20px;
+    height: 850px; /* Fixed height */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    height: 100%; /* Full height for map */
+}
+
+/* Status Indicator */
+.status-indicator-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff0000; /* Default color */
+    border: 2px solid #000000; /* Black border */
+    animation: flash 1.5s infinite; /* Flashing effect */
+}
+
+@keyframes flash {
+    0%, 100% {
+        background-color: #ff0000; /* Red */
+    }
+    50% {
+        background-color: #ffff00; /* Yellow */
+    }
+}
+
+/* Data and Charts Container */
+.data-section {
+    background-color: #F9F9F9; /* Light background */
+    padding: 40px 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin: 20px 0; /* Space around section */
+}
+
+.section-heading {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 28px;
+    color: #081F34; /* Heading color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Placeholder Container */
+.placeholder-container {
+    background-color: #E1DFD9; /* Background for placeholder */
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid #CFFF81; /* Border color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    transition: opacity 0.5s ease-in-out; /* Transition for fading */
+}
+
+.placeholder-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 20px;
+    color: #081F34; /* Text color */
+}
+
+/* Chart Container */
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out; /* Transition for fading */
+    margin-top: 20px; /* Space above */
+}
+
+.charts-container.visible {
+    opacity: 1; /* Show when visible */
+}
+
+.chart-box {
+    width: 100%;
+    max-width: 350px; /* Limit width for chart boxes */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow */
+    border: 2px solid #CFFF81; /* Border color */
+    margin-bottom: 20px; /* Space below each chart */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.chart-box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.chart-box h3 {
+    font-size: 20px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #081F34; /* Chart heading color */
+    margin-bottom: 10px;
+}
+
+.canvas-wrapper {
+    position: relative;
+    height: 300px; /* Height for chart visibility */
+    margin-top: 20px; /* Space above chart */
+}
+
+canvas {
+    max-width: 100%; /* Responsive width */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+
+/* Weather Report Section */
+.weather-report-section {
+    color:#000000;
+    background-color: #F9F9F9; /* Weather section background */
+    padding: 10px; /* Padding for weather section */
+    margin: 20px 0; /* Margin above and below */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    justify-content: center; /* Center contents */
+}
+
+.weather-info {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: column;
+    gap: 20px; /* Space between items */
+    align-items: center; /* Center items vertically */
+}
+
+.weather-details {
+    display: flex; /* Use flexbox to align details horizontally */
+    font-size: 18px;
+    margin:0;
+    padding: 0 15px;
+    gap:10px;
+}
+
+.weather-report-container {
+    display: flex; /* Use flexbox to align button and weather info */
+    flex-direction: column;
+    justify-content: center; /* Space out items */
+    align-items: center; /* Center items vertically */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border:1px solid #ddd;
+}
+
+/* Button Styles */
+.get-weather-button {
+    background-color: #CFFF81; /* Button background color */
+    color: #081F34; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Archivo Black', sans-serif; /* Font for button text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
+}
+
+.get-weather-button:hover {
+    background-color: #081F34; /* Darker background on hover */
+    color: #CFFF81; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Section 3: Population Chart */
+/* Add this styling in your styles.css */
+
+#section-3 {
+    padding: 40px;
+    background-color: #E1DFD9;
+    text-align: center;
+}
+
+#section-3 h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 28px;
+    width: 100%;
+    color: #CFFF81;
+    padding: 15px 30px;
+    background-color: #1A1A1D;   /* Dark SewerSense theme color */
+    color: #CFFF81;              /* Light color for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 30px;
+    text-transform: uppercase;   /* All caps for "Sewage Insights" */
+    letter-spacing: 1px;         /* Add spacing between letters for a sleek look */
+}
+
+.filter-container {
+    margin-bottom: 30px;            /* Space between filter and charts */
+}
+
+.filter-btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.filter-btn:hover {
+    background-color: #555;         /* Lighter color on hover */
+}
+
+.filter-dropdown {
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-dropdown:focus {
+    border-color: #333;             /* Change border color on focus */
+}
+
+#section-3 h2 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for both charts arranged horizontally */
+.chart-wrapper {
+    display: flex;
+    justify-content: space-around;  /* Distribute charts evenly */
+    align-items: center;            /* Align charts vertically at the center */
+    gap: 30px;                      /* Space between the chart containers */
+    padding: 20px;
+    margin-bottom: 40px;            /* Space between the section and charts */
+}
+
+/* Individual chart containers */
+.chart-container {
+    display: flex;
+    flex-direction: column;         /* Stack image and text vertically within each container */
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;         /* White background for modern contrast */
+    border-radius: 10px;            /* Smooth edges for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 45%;                     /* Make each container take 45% of the row */
+}
+
+/* Image styling */
+.chart-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;             /* Slight rounding on images for a clean look */
+}
+
+/* Label below each chart */
+.chart-label {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif; /* Font for text */
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+    .chart-wrapper {
+        flex-direction: column;      /* Stack charts vertically on smaller screens */
+    }
+
+    .chart-container {
+        width: 100%;                /* Expand to full width on smaller screens */
+    }
+}
+
+/* Flood Risk Section */
+#flood-risk-section {
+    padding: 30px 20px;
+    background-color: #081F34; /* Dark background */
+    color: #CFFF81; /* Second color */
+    text-align: center;
+}
+
+.flood-risk-container {
+    margin-top: 20px;
+}
+
+.risk-output-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.risk-day {
+    width: 12%;
+    padding: 10px;
+    background-color: #CFFF81;
+    border-radius: 8px;
+    color: #081F34;
+    font-weight: bold;
+    text-align: center;
+}

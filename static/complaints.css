@@ -1,0 +1,171 @@
+/* Complaints Section */
+
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif; /* Default font for body text */
+}
+
+body {
+    background-color: #081F34; /* Set background color to third color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Header and Navigation */
+header {
+    background-color: #081F34; /* Set background to third color */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: #CFFF81; /* Set to second color */
+}
+
+.logo {
+    font-family: 'Archivo Black', sans-serif; /* Use Archivo Black for headings */
+    font-weight: 400;
+    font-size: 24px;
+    color: #CFFF81; /* Set to second color */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+}
+
+.navbar-right ul li {
+    margin-left: 30px;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: #CFFF81; /* Set to second color */
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar-right ul li a:hover {
+    color: #fff;
+}
+
+/* Profile Image */
+.profile-link {
+    display: inline-block;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  /* Makes the image circular */
+    border: 2px solid #CFFF81; /* Minimal border using second color */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Minimal shadow for a modern look */
+}
+
+.complaints-section {
+    padding: 80px 20px;
+    background-color: #F9F9F9; /* Light background color */
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.complaints-heading {
+    font-family: 'Archivo Black', sans-serif;
+    color: #081F34; /* Third color */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.complaints-info {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.complaint-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #081F34;
+}
+
+.complaint-form input,
+.complaint-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #CFFF81; /* Second color */
+    border-radius: 8px;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #CFFF81;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #A1DB4F;
+}
+
+/* Complaints List */
+.complaints-list {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.complaints-list h2 {
+    font-family: 'Archivo Black', sans-serif;
+    color: #081F34;
+    margin-bottom: 20px;
+}
+
+.complaints-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.complaints-list ul li {
+    background-color: #E1DFD9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
