@@ -30,3 +30,4 @@ SewerSense is an AI-driven platform designed to enhance flood risk prediction an
 4. **Live weather data** enhances flood risk prediction.  
 5. **Civic authorities can access complaints** and take action through a dedicated interface.  
 
+[My Website Design Demo.pdf](https://github.com/user-attachments/files/20700233/My.Website.Design.Demo.pdf)
