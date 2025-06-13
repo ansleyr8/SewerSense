@@ -2,7 +2,7 @@
 ## **AI-Powered Flood Risk Management & Sewer System Analysis**  
 
 ### **Overview**  
-SewerSense is an AI-driven platform designed to enhance flood risk prediction and optimize sewer system management. It integrates **IBM Watson Assistant**, **GIS mapping**, and **real-time weather data** to provide actionable insights for both civic authorities and the public. The platform enables users to monitor sewer conditions, submit complaints, and receive AI-powered responses for effective risk mitigation.  
+SewerSense is an AI-driven platform designed to enhance flood risk prediction and optimize sewer system management. It integrates **IBM Watson Assistant**, **GIS mapping**, and **real-time weather data** to provide actionable insights for both civic authorities and the public. The platform enables users to monitor sewer conditions, submit complaints, and receive AI-powered responses for effective risk mitigation. The UI/UX was designed in Figma, featuring high-fidelity wireframes, a responsive layout, and a clean, minimalist interface. A consistent design system was developed using a neutral color palette with accent tones for alerts, accessible typography for readability, and component-based layouts optimized for usability and scalability.
 
 #### **Demo**
 [My Website Design Demo.pdf](https://github.com/user-attachments/files/20700233/My.Website.Design.Demo.pdf)
@@ -10,6 +10,7 @@ SewerSense is an AI-driven platform designed to enhance flood risk prediction an
 ---
 
 ## **Key Features**  
+✅ **UI/UX Design:** Designed clean, intuitive wireframes and interactive prototypes in Figma, focusing on accessibility, responsiveness, and user-friendly navigation.
 ✅ **Interactive GIS Mapping:** Displays sewer-related data with real-time markers and customizable map interactions.  
 ✅ **IBM Watson Assistant Chatbot:** AI-powered chatbot for intelligent user interaction and assistance.  
 ✅ **Real-Time Weather Data:** Fetches live weather updates using the **OpenWeather API** to support predictive flood risk analysis.  
@@ -19,7 +20,7 @@ SewerSense is an AI-driven platform designed to enhance flood risk prediction an
 ---
 
 ## **Technology Stack**  
-- **Frontend:** HTML, CSS, JavaScript (Leaflet.js for GIS mapping)  
+- **Frontend:** Figma, HTML, CSS, JavaScript (Leaflet.js for GIS mapping)  
 - **Backend:** Flask (Python)  
 - **AI & Cloud Services:** IBM Watson Assistant, IBM Cloud  
 - **API Integrations:** OpenWeather API for real-time weather data  
